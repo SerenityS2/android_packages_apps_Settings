@@ -440,4 +440,18 @@
     <string name="root_access_apps">애플리케이션만</string>
     <string name="root_access_adb">ADB만</string>
     <string name="root_access_all">애플리케이션 및 ADB</string>
+
+    <!-- HALO -->
+    <string name="halo_options_title">HALO</string>
+    <string name="halo_hide_title">작동 후 HALO 숨기기</string>
+    <string name="halo_hide_summary">작동한 후에 HALO를 자동으로 숨깁니다.</string>
+    <string name="halo_reversed_title">HALO 제스쳐</string>
+    <string name="halo_reversed_summary">제스쳐를 사용합니다.</string>
+    <string name="halo_state_title">HALO 정책</string>
+    <string name="halo_state_summary">HALO 정책을 설정합니다.</string>
+    <string name="halo_state_black">블랙 리스트</string>
+    <string name="halo_state_white">화이트 리스트</string>
+    <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
+    <string name="app_halo_label_black">HALO 블랙 리스트로 설정</string>
+    <string name="app_halo_label_white">HALO 화이트 리스트로 설정</string>
 </resources>
