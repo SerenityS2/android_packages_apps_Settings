@@ -430,6 +430,9 @@
     <string name="wifi_setting_priority_summary">Wi-Fi 네트워크 간 우선순위 설정</string>
     <string name="volume_adjust_sounds_enable_title">볼륨 조절 소리</string>
     <string name="volume_adjust_sounds_enable_summary">볼륨 버튼으로 볼륨 조절 시 소리로 확인</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">카메라 셔터음 사용</string>
+    <string name="camera_sounds_summary">경고: 몇몇 지역에서는 셔터음을 사용하지 않는 것이 불법입니다!</string>
     <string name="root_access">루트 권한</string>
     <string name="root_access_warning_title">루트 권한</string>
     <string name="root_access_warning_message">애플리케이션의 루트 권한 요청을 허용하는 것은 매우 위험하며 사용자 시스템의 개인 정보를 위험에 노출시킬 수 있습니다! 루트 권한 요청을 허용하시겠습니까?</string>
