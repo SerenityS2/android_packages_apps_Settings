@@ -79,6 +79,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_HALO_STATE = "halo_state";
     private static final String KEY_HALO_HIDE = "halo_hide";
     private static final String KEY_HALO_REVERSED = "halo_reversed";
+    private static final String KEY_HALO_SIZE = "halo_size";
 
     // Strings used for building the summary
     private static final String ROTATION_ANGLE_0 = "0";
@@ -110,6 +111,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mHaloState;
     private CheckBoxPreference mHaloHide;
     private CheckBoxPreference mHaloReversed;
+    private ListPreference mHaloSize;
 
     private INotificationManager mNotificationManager;
 
@@ -231,6 +233,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mHaloReversed = (CheckBoxPreference) prefSet.findPreference(KEY_HALO_REVERSED);
         mHaloReversed.setChecked(Settings.System.getInt(resolver,
                 Settings.System.HALO_REVERSED, 1) == 1);
+
+        mHaloSize = (ListPreference) prefSet.findPreference(KEY_HALO_SIZE);
+        try {
+            float haloSize = Settings.System.getFloat(mContext.getContentResolver(),
+                    Settings.System.HALO_SIZE, 1.0f);
+            mHaloSize.setValue(String.valueOf(haloSize));  
+        } catch(Exception ex) {
+            // So what
+        }
+        mHaloSize.setOnPreferenceChangeListener(this);
     }
 
     private void updateDisplayRotationPreferenceDescription() {
@@ -534,6 +546,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } catch (android.os.RemoteException ex) {
                 // System dead
             }
+            return true;
+        }
+        if (preference == mHaloSize) {
+            float haloSize = Float.valueOf((String) newValue);
+            Settings.System.putFloat(getActivity().getContentResolver(),
+                    Settings.System.HALO_SIZE, haloSize);
             return true;
         }
         return true;

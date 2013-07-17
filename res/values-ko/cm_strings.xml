@@ -454,4 +454,14 @@
     <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
     <string name="app_halo_label_black">HALO 블랙 리스트로 설정</string>
     <string name="app_halo_label_white">HALO 화이트 리스트로 설정</string>
+
+    <string name="halo_size_title">HALO 크기</string>
+    <string name="halo_size_summary">HALO 크기를 설정합니다.</string>
+    <string name="halo_size_miniscule">아주 작음</string>
+    <string name="halo_size_small">작음</string>
+    <string name="halo_size_default">기본</string>
+    <string name="halo_size_large">약간 큼</string>
+    <string name="halo_size_gigantic">큼</string>
+    <string name="halo_size_monster">아주 큼</string>
+
 </resources>
