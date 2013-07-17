@@ -236,7 +236,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         mHaloSize = (ListPreference) prefSet.findPreference(KEY_HALO_SIZE);
         try {
-            float haloSize = Settings.System.getFloat(mContext.getContentResolver(),
+            float haloSize = Settings.System.getFloat(getActivity().getContentResolver(),
                     Settings.System.HALO_SIZE, 1.0f);
             mHaloSize.setValue(String.valueOf(haloSize));  
         } catch(Exception ex) {
@@ -549,7 +549,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             return true;
         }
         if (preference == mHaloSize) {
-            float haloSize = Float.valueOf((String) newValue);
+            float haloSize = Float.valueOf((String) objValue);
             Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.HALO_SIZE, haloSize);
             return true;
