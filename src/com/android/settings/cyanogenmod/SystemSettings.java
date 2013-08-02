@@ -54,12 +54,16 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_PIE_CONTROL = "pie_control";
     private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "expanded_desktop_no_navbar";
+    private static final String KEY_LISTVIEW_ANIMATION = "listview_animation";
+    private static final String KEY_LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
     private PreferenceScreen mPieControl;
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
+    private ListPreference mListViewAnimation;
+    private ListPreference mListViewInterpolator;
 
     private boolean mIsPrimary;
 
@@ -133,10 +137,23 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
             mPieControl = null;
         }
 
+        mListViewAnimation = (ListPreference) findPreference(KEY_LISTVIEW_ANIMATION);
+        int listviewanimation = Settings.System.getInt(getActivity().getContentResolver(),
+                	Settings.System.LISTVIEW_ANIMATION, 1);
+        mListViewAnimation.setValue(String.valueOf(listviewanimation));
+        mListViewAnimation.setSummary(mListViewAnimation.getEntry());
+        mListViewAnimation.setOnPreferenceChangeListener(this);
+
+        mListViewInterpolator = (ListPreference) findPreference(KEY_LISTVIEW_INTERPOLATOR);
+        int listviewinterpolator = Settings.System.getInt(getActivity().getContentResolver(),
+        		Settings.System.LISTVIEW_INTERPOLATOR, 0);
+        mListViewInterpolator.setValue(String.valueOf(listviewinterpolator));
+        mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
+        mListViewInterpolator.setOnPreferenceChangeListener(this);
+
         // Expanded desktop
         mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
         mExpandedDesktopNoNavbarPref = (CheckBoxPreference) findPreference(KEY_EXPANDED_DESKTOP_NO_NAVBAR);
-
         int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
                 Settings.System.EXPANDED_DESKTOP_STYLE, 0);
 
@@ -183,7 +200,7 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
         super.onPause();
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue, Object newValue) {
         if (preference == mExpandedDesktopPref) {
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             updateExpandedDesktop(expandedDesktopValue);
@@ -193,9 +210,30 @@ public class SystemSettings extends SettingsPreferenceFragment  implements
             updateExpandedDesktop(value ? 2 : 0);
             return true;
         }
-
         return false;
     }
+    
+	@Override
+	public boolean onPreferenceChange(Preference preference, Object newValue) {
+		 if (preference == mListViewAnimation) {
+	            int listviewanimation = Integer.valueOf((String) newValue);
+	            int index = mListViewAnimation.findIndexOfValue((String) newValue);
+	            Settings.System.putInt(getActivity().getContentResolver(),
+	                    Settings.System.LISTVIEW_ANIMATION,
+	                    listviewanimation);
+	            mListViewAnimation.setSummary(mListViewAnimation.getEntries()[index]);
+	            return true;
+	        } else if (preference == mListViewInterpolator) {
+	            int listviewinterpolator = Integer.valueOf((String) newValue);
+	            int index = mListViewInterpolator.findIndexOfValue((String) newValue);
+	            Settings.System.putInt(getActivity().getContentResolver(),
+	                    Settings.System.LISTVIEW_INTERPOLATOR,
+	                    listviewinterpolator);
+	            mListViewInterpolator.setSummary(mListViewInterpolator.getEntries()[index]);
+	            return true;
+	        }
+		return false;
+	}
 
     private void updateLightPulseDescription() {
         if (Settings.System.getInt(getActivity().getContentResolver(),
