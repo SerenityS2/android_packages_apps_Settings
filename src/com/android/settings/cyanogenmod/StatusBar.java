@@ -50,6 +50,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
     private static final String PREF_STATUS_BAR_TRAFFIC_COLOR = "network_speed_color";
+    private static final String FREF_FULLSCREEN_STATUSBAR_TIMEOUT = "fullscreen_statusbar_timeout";
 
     private ListPreference mStatusBarAmPm;
     private ListPreference mStatusBarCmSignal;
@@ -60,6 +61,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private String mCustomLabelText = null;
     private CheckBoxPreference mStatusBarTraffic;
     private ColorPickerPreference mStatusBarTrafficColor;
+    ListPreference mFullScreenStatusBarTimeout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,6 +93,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         int intColor = Settings.System.getInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_TRAFFIC_COLOR, defaultColor);
         mStatusBarTrafficColor.setNewPreviewColor(intColor);
+
+        mFullScreenStatusBarTimeout = (ListPreference) findPreference(FREF_FULLSCREEN_STATUSBAR_TIMEOUT);
+        mFullScreenStatusBarTimeout.setOnPreferenceChangeListener(this);
+        mFullScreenStatusBarTimeout.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.FULLSCREEN_STATUSBAR_TIMEOUT, 10000) + "");
 
         if (DateFormat.is24HourFormat(getActivity())) {
             ((PreferenceCategory) prefSet.findPreference(STATUS_BAR_CLOCK_CATEGORY))
@@ -213,6 +220,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUS_BAR_TRAFFIC_COLOR, intHex);
+        } else if (preference == mFullScreenStatusBarTimeout) {
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.FULLSCREEN_STATUSBAR_TIMEOUT, val);
             return true;
         }
         return false;

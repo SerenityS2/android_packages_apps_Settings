@@ -996,16 +996,18 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     multiple font sizes in a limited amount of space. -->
     <string name="font_size_sample">Sample</string>
 
+    <!-- Fullscreen Status Bar -->
+    <string name="fullscreen_statusbar_title">Fullscreen Statusbar</string>
+    <string name="fullscreen_statusbar_summary">Swiping down from the top of full screen apps shows status bar for some seconds.</string>
+    <string name="fullscreen_statusbar_timeout_title">Fullscreen Statusbar Timeout</string>
+    <string name="fullscreen_statusbar_timeout_summary">Timeout for Fullscreen Statusbar</string>
+
     <!-- Quicksettings panel floating window -->
     <string name="title_floating_window">Floating window</string>
     <string name="summary_floating_window">Open Quick Settings tiles in floating window</string>
 
     <!-- Settings Group: Halo -->
     <string name="halo_category">HALO</string>
-
-    <!-- Fullscreen Status Bar -->
-    <string name="fullscreen_statusbar_title">Fullscreen Statusbar</string>
-    <string name="fullscreen_statusbar_summary">Swiping down from the top of full screen apps shows status bar for 10 seconds.</string>
 
     <!-- HALO -->
     <string name="halo_enabled_title">Enable HALO</string>
