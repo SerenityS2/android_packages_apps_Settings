@@ -41,6 +41,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemProperties;
 import android.os.Vibrator;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -91,6 +92,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HEADSET_CONNECT_PLAYER = "headset_connect_player";
     private static final String KEY_CONVERT_SOUND_TO_VIBRATE = "notification_convert_sound_to_vibration";
     private static final String KEY_VIBRATE_DURING_CALLS = "notification_vibrate_during_calls";
+    private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
+    private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
     private static final String KEY_SAFE_HEADSET_VOLUME = "safe_headset_volume";
     private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
     private static final String KEY_POWER_NOTIFICATIONS = "power_notifications";
@@ -121,6 +124,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDtmfTone;
     private CheckBoxPreference mSoundEffects;
     private CheckBoxPreference mHapticFeedback;
+    private CheckBoxPreference mCameraSounds;
     private CheckBoxPreference mVolumeAdjustSounds;
     private Preference mMusicFx;
     private CheckBoxPreference mLockSounds;
@@ -241,6 +245,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mHapticFeedback.setPersistent(false);
         mHapticFeedback.setChecked(Settings.System.getInt(resolver,
                 Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0);
+        mCameraSounds = (CheckBoxPreference) findPreference(KEY_CAMERA_SOUNDS);
+        mCameraSounds.setPersistent(false);
+        mCameraSounds.setChecked(SystemProperties.getBoolean(
+                PROP_CAMERA_SOUND, true));
         mVolumeAdjustSounds = (CheckBoxPreference) findPreference(KEY_VOLUME_ADJUST_SOUNDS);
         if (mVolumeAdjustSounds != null) {
             if (!Utils.hasVolumeRocker(getActivity())) {
@@ -485,6 +493,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mHapticFeedback) {
             Settings.System.putInt(getContentResolver(), Settings.System.HAPTIC_FEEDBACK_ENABLED,
                     mHapticFeedback.isChecked() ? 1 : 0);
+
+        } else if (preference == mCameraSounds) {
+            SystemProperties.set(PROP_CAMERA_SOUND, mCameraSounds.isChecked() ? "1" : "0");
 
         } else if (preference == mVolumeAdjustSounds) {
             Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
