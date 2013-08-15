@@ -55,6 +55,12 @@
                 android:dialogTitle="@string/dialog_title_font_size" />
 
         <PreferenceScreen
+            android:key="lcd_density_setup"
+            android:fragment="com.android.settings.DensityChanger"
+            android:title="@string/lcd_density_title"
+            android:summary="@string/lcd_density_summary" />
+
+        <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
