@@ -1053,5 +1053,25 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_density_dialog_summary">"Changing your LCD density can cause unexpected app behavior. If you encounter market app incompatibility please return here and restart the process from step 1."</string>
     <string name="custom_density_dialog_button_got">Got it!</string>
     <string name="custom_density_dialog_button_reboot">Reboot now</string>
+    <!-- Status bar background style -->
+    <string name="status_bar_transparency_title">Status bar transparency</string>
+    <string name="status_bar_color_title">Status bar color</string>
+    <string name="status_bar_background_style">Status bar background style</string>
+    <string name="status_bar_alpha_mode_dialog_text_title">Show status bar transparency</string>
+    <string name="status_bar_alpha_mode_text_title">Transparency mode</string>
+    <string name="status_bar_alpha_mode_home">on launcher</string>
+    <string name="status_bar_alpha_mode_default">on launcher and keyguard</string>
+    <string name="status_bar_alpha_mode_always">always</string>
+    <string name="status_bar_style_reset">Reset</string>
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color picker</string>
+    <string name="press_color_to_apply">Tap on color to apply</string>
+    <string name="arrow_right" translatable="false">\u2192</string>
+    <string name="arrow_down" translatable="false">\u2193</string>
+    <string name="hex_hint" translatable="false">#ff000000</string>
+    <string name="ics_color" translatable="false">!!!</string>
+    <string name="set">Set</string>
+    <string name="hex">Hex:</string>
+    <string name="color_default">Default</string>
 
 </resources>

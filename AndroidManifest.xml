@@ -1637,6 +1637,8 @@
 
         <activity android:name=".cyanogenmod.QuickSettings" />
 
+        <activity android:name=".cyanogenmod.StatusBarStyle" />
+
         <activity
             android:name=".DensityChanger"
             android:label="@string/lcd_density_wizard" >
