@@ -592,5 +592,17 @@
     <string name="privacy_guard_reset_title">재설정</string>
     <string name="privacy_guard_manager_show_system_apps">내장된 응용 프로그램을 보여줍니다</string>
     <string name="privacy_guard_manager_filter_permissions">권한 필터</string>
+    <string name="status_bar_transparency_title">상태표시줄 투명도</string>
+    <string name="status_bar_color_title">상태표시줄 색상</string>
+    <string name="status_bar_background_style">상태표시줄 배경스타일</string>
+    <string name="status_bar_alpha_mode_dialog_text_title">상태표시줄 투명도 표시 방법</string>
+    <string name="status_bar_alpha_mode_text_title">투명모드 설정</string>
+    <string name="status_bar_alpha_mode_home">런처에서만</string>
+    <string name="status_bar_alpha_mode_default">런처 및 키보호 또는 잠금화면</string>
+    <string name="status_bar_alpha_mode_always">항상</string>
+    <string name="status_bar_style_reset">초기화</string>
+    <string name="dialog_color_picker">색상 선택기</string>
+    <string name="press_color_to_apply">적용 할 색상을 누릅니다</string>
+    <string name="color_default">기본값</string>
 
 </resources>
