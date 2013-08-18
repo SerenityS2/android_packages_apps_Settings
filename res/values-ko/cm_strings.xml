@@ -579,5 +579,18 @@
     <string name="listview_bounce_interpolator">도착위치에서 튕김</string>
     <string name="statusbar_quick_peek_title">퀵 픽</string>
     <string name="statusbar_quick_peek_summary">상단 표시줄이 없어지는 풀 화면에서 상단부분을 아래로 스와잎하여 상태 표시줄을 표시</string>
-    
+    <string name="privacy_guard_switch_label">Privacy Guard 활성화</string>
+    <string name="privacy_guard_dlg_title">Privacy Guard를 활성화 하시겠어요?</string>
+    <string name="privacy_guard_dlg_text">Privacy Guard가 활성화되면 보안을 위해 응용 프로그램은 연락처, 메시지 또는 통화 기록 등의 개인 데이터에 액세스 할 수 없습니다.</string>
+    <string name="privacy_guard_dlg_system_app_text">앱에 대한 Privacy Guard를 활성화 할 때 내장 응용 프로그램, 응용 프로그램이 개인 데이터에 액세스하거나 제공 할 수 없습니다. 이렇게하면 다른 응용 프로그램이 예기치 않은 오류가 발생할 수 있습니다.</string>
+    <string name="privacy_guard_default_title">기본적으로 활성화</string>
+    <string name="privacy_guard_default_summary">새로 설치된 응용 프로그램에 대해 기본적으로 활성화</string>
+    <string name="privacy_guard_manager_summary">응용 프로그램이 개인 데이터에 액세스 할 수있는 관리</string>
+    <string name="privacy_guard_no_user_apps">응용 프로그램이 설치되지 않습니다</string>
+    <string name="privacy_guard_filter_does_not_match">관련 권한을 가진 응용 프로그램이 설치되지 않습니다</string>
+    <string name="privacy_guard_help_title">도움</string>
+    <string name="privacy_guard_reset_title">재설정</string>
+    <string name="privacy_guard_manager_show_system_apps">내장된 응용 프로그램을 보여줍니다</string>
+    <string name="privacy_guard_manager_filter_permissions">권한 필터</string>
+
 </resources>
