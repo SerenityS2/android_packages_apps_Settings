@@ -1832,4 +1832,6 @@
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"표시할 긴급 알림 유형을 선택합니다."</string>
     <string name="camera_sounds_title">카메라 셔터 소리</string>
     <string name="camera_sounds_summary">경고 : 카메라 셔터 음을 비활성화하면 일부 지역에서는 불법입니다!</string>
+    <string name="clock_use_second">초 단위 사용</string>
+    <string name="clock_use_second_summary">초 단위의 시계를 사용합니다.</string>
 </resources>
