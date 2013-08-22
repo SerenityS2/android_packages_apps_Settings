@@ -464,4 +464,7 @@
     <string name="halo_size_gigantic">큼</string>
     <string name="halo_size_monster">아주 큼</string>
 
+    <!-- Statusbar Second Clock -->
+    <string name="clock_use_second">초 시계</string>
+    <string name="clock_use_second_summary">시계에 초를 표시</string>
 </resources>
