@@ -4413,4 +4413,17 @@
     <!-- Statusbar Second Clock -->
     <string name="clock_use_second">Use second clock</string>
     <string name="clock_use_second_summary">Show second in clock</string>
+
+    <!-- DokDo Info -->
+    <string name="dokdo_title">DokDo ROM Information</string>
+    <string name="main_title">Main</string>
+    <string name="member_title">Member Infomation</string>
+    <string name="noticeboard_title">Notice</string>
+    <string name="noticeboard_summary">View DokDo-ROM Notice Board</string>
+    <string name="neighbors28_title">neighbors28</string>
+    <string name="neighbors28_summary">Maintainer / Platform Developer</string>
+    <string name="slg1119_title">slg1119</string>
+    <string name="slg1119_summary">Platform Developer / Project Planner</string>
+    <string name="teddy8912_title">teddy8912</string>
+    <string name="teddy8912_summary">Platform Builder / Kernel Developer</string>
 </resources>

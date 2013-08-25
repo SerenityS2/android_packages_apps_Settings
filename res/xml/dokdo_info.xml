@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="@string/main_title">
+    <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_title"
+                android:fragment="com.android.settings.cyanogenmod.ChangeLog" />
+    
+    <PreferenceScreen android:key="noticeboard"
+                android:title="@string/noticeboard_title"
+                android:summary="@string/noticeboard_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.settings"
+                    android:targetClass="com.android.settings.dokdo.DokDo_Notice" />
+        </PreferenceScreen>
+  </PreferenceCategory>
+
+  <PreferenceCategory android:title="@string/member_title">
+    <Preference android:key="neighbors28"
+                android:title="@string/neighbors28_title"
+                android:summary="@string/neighbors28_summary"
+                android:selectable="false" />
+    
+    <Preference android:key="slg1119"
+                android:title="@string/slg1119_title"
+                android:summary="@string/slg1119_summary" 
+                android:selectable="false" />
+    
+    <Preference android:key="teddy8912"
+                android:title="@string/teddy8912_title"
+                android:summary="@string/teddy8912_summary"
+                android:selectable="false" />
+  </PreferenceCategory>
+</PreferenceScreen>

@@ -1639,6 +1639,10 @@
 
         <activity android:name=".cyanogenmod.StatusBarStyle" />
 
+        <activity android:name=".dokdo.DokDo_Info" />
+
+        <activity android:name=".dokdo.DokDo_Notice" />
+
         <activity
             android:name=".DensityChanger"
             android:label="@string/lcd_density_wizard" >
