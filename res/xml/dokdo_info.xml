@@ -29,5 +29,15 @@
                 android:title="@string/teddy8912_title"
                 android:summary="@string/teddy8912_summary"
                 android:selectable="false" />
+                
+    <Preference android:key="htchoi1995"
+                android:title="@string/htchoi1995_title"
+                android:summary="@string/htchoi1995_summary"
+                android:selectable="false" />
+                
+    <Preference android:key="wfmtooopa"
+                android:title="@string/wfmtooopa_title"
+                android:summary="@string/wfmtooopa_summary"
+                android:selectable="false" />
   </PreferenceCategory>
 </PreferenceScreen>
