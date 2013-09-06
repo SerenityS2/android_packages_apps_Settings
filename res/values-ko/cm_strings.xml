@@ -577,8 +577,11 @@
     <string name="listview_overshoot_interpolator">도착위치를 조금 지나쳤다가 도착위치로 이동</string>
     <string name="listview_anticipate_overshoot_interpolator">위 둘을 동시에</string>
     <string name="listview_bounce_interpolator">도착위치에서 튕김</string>
-    <string name="statusbar_quick_peek_title">퀵 픽</string>
-    <string name="statusbar_quick_peek_summary">상단 표시줄이 없어지는 풀 화면에서 상단부분을 아래로 스와잎하여 상태 표시줄을 표시</string>
+    <string name="statusbar_quick_peek_title">퀵 피크</string>
+    <string name="statusbar_quick_peek_summary">상단 표시줄이 없어지는 풀 화면에서 상단부분을 아래로 스와잎하여 상태 표시줄을 표시합니다</string>
+    <string name="statusbar_quick_peek_category_title">퀵 피크</string>
+    <string name="statusbar_quick_peek_timeout_title">퀵 피크 시간설정</string>
+    <string name="statusbar_quick_peek_timeout_summary">퀵 피크가 사라지는 시간을 설정합니다.</string>
     <string name="privacy_guard_switch_label">Privacy Guard 활성화</string>
     <string name="privacy_guard_dlg_title">Privacy Guard를 활성화 하시겠어요?</string>
     <string name="privacy_guard_dlg_text">Privacy Guard가 활성화되면 보안을 위해 응용 프로그램은 연락처, 메시지 또는 통화 기록 등의 개인 데이터에 액세스 할 수 없습니다.</string>
