@@ -41,6 +41,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String STATUS_BAR_CLOCK = "status_bar_show_clock";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String STATUS_BAR_QUICK_PEEK = "status_bar_quick_peek";
+    private static final String STATUS_BAR_QUICK_PEEK_TIMEOUT = "statusbar_quick_peek_timeout";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
@@ -54,6 +55,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mStatusBarNotifCount;
     private CheckBoxPreference mClockUseSecond;
+    ListPreference mStatusBarQuickPeekTimeout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,6 +75,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarQuickPeek = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_QUICK_PEEK);
         mStatusBarQuickPeek.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
                 Settings.System.STATUSBAR_PEEK, 0) == 1));
+
+        mStatusBarQuickPeekTimeout = (ListPreference) findPreference(STATUS_BAR_QUICK_PEEK_TIMEOUT);
+        mStatusBarQuickPeekTimeout.setOnPreferenceChangeListener(this);
+        mStatusBarQuickPeekTimeout.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_QUICK_PEEK_TIMEOUT, 5000) + "");
 
         mClockUseSecond = (CheckBoxPreference) prefSet.findPreference(CLOCK_USE_SECOND);
         mClockUseSecond.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
@@ -179,6 +186,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL, value ? 1 : 0);
+            return true;
+        } else if (preference == mStatusBarQuickPeekTimeout) {
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_QUICK_PEEK_TIMEOUT, val);
             return true;
         } else if (preference == mStatusBarNotifCount) {
             boolean value = (Boolean) newValue;

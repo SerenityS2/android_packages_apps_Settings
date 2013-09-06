@@ -43,6 +43,27 @@
 
     </PreferenceCategory>
 
+    <!-- Status bar tweaks -->
+    <PreferenceCategory
+        android:key="status_bar_quick_peek_category"
+        android:title="@string/status_bar_cquick_peek_category_title">
+
+        <CheckBoxPreference
+            android:key="status_bar_quick_peek"
+            android:title="@string/statusbar_quick_peek_title"
+            android:summary="@string/statusbar_quick_peek_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="statusbar_quick_peek_timeout"
+            android:entries="@array/statusbar_quick_peek_timeout_entries"
+            android:entryValues="@array/statusbar_quick_peek_timeout_values"
+            android:title="@string/statusbar_quick_peek_timeout_title"
+            android:summary="@string/statusbar_quick_peek_timeout_summary"
+            android:dependency="status_bar_quick_peek" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="status_bar_general"
         android:title="@string/status_bar_general_title">
@@ -65,12 +86,6 @@
             android:fragment="com.android.settings.cyanogenmod.StatusBarStyle"
             android:key="status_bar_background_style"
             android:title="@string/status_bar_background_style" />
-
-        <CheckBoxPreference
-            android:key="status_bar_quick_peek"
-            android:title="@string/statusbar_quick_peek_title"
-            android:summary="@string/statusbar_quick_peek_summary"
-            android:defaultValue="true" />
 
         <CheckBoxPreference
             android:key="status_bar_brightness_control"

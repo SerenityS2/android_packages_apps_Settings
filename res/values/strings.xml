@@ -4410,6 +4410,8 @@
     <!-- Statusbar Quick Peek -->
     <string name="statusbar_quick_peek_title">Quick Peek</string>
     <string name="statusbar_quick_peek_summary">Peek at statusbar by swiping from top edge of screen</string>
+    <string name="statusbar_quick_peek_timeout_title">Quick Peek Timeout</string>
+    <string name="statusbar_quick_peek_timeout_summary">Timeout for Quick Peek</string>
 
     <!-- Statusbar Second Clock -->
     <string name="clock_use_second">Use second clock</string>
