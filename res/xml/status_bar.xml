@@ -43,10 +43,10 @@
 
     </PreferenceCategory>
 
-    <!-- Status bar tweaks -->
+    <!-- Quick Peek -->
     <PreferenceCategory
         android:key="status_bar_quick_peek_category"
-        android:title="@string/status_bar_quick_peek_category_title">
+        android:title="@string/statusbar_quick_peek_category_title">
 
         <CheckBoxPreference
             android:key="status_bar_quick_peek"
