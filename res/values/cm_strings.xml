@@ -1022,4 +1022,32 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Statusbar Second Clock -->
     <string name="clock_use_second">Use second clock</string>
     <string name="clock_use_second_summary">Show second in clock</string>
+
+    <!-- Circle Battery Mod -->
+    <string name="circle_mod_cat">Circle battery options</string>
+    <string name="circle_battery_color">Circle color</string>
+    <string name="circle_battery_text_color">Circle text color</string>
+    <string name="circle_battery_animation_speed">Circle animation speed</string>
+    <string name="circle_battery_animation_speed_none">None</string>
+    <string name="circle_battery_animation_speed_slow">Slow</string>
+    <string name="circle_battery_animation_speed_stock">Normal</string>
+    <string name="circle_battery_animation_speed_fast">Fast</string>
+    <string name="circle_battery_reset_title">Reset circle colors</string>
+    <string name="circle_battery_reset_summary">Reset circle colors to apply installed theme engine colors</string>
+
+    <!-- Battery bar -->
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_cat">Battery bar options</string>
+    <string name="battery_bar_style_title">Battery bar style</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+    <string name="battery_bar_disabled">Disabled</string>
+    <string name="battery_bar_statusbar">Statusbar</string>
+    <string name="battery_bar_top">Top of navbar</string>
+    <string name="battery_bar_bottom">Bottom of navbar</string>
+    <string name="battery_bar_regular">Regular</string>
+    <string name="battery_bar_center">Center-mirrored</string>
+
 </resources>
