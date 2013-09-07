@@ -1059,4 +1059,24 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
 
+    <!-- Custom Carrier Label -->
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Enter an empty to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+
+    <!-- Network speed -->
+    <string name="show_network_speed">Network speed indicator</string>
+    <string name="show_network_speed_summary">Show network speed in statsbar</string>
+    <string name="network_speed_color_title">Network speed color</string>
+
+    <!-- Transparency Settings -->
+    <string name="transparency_settings_title">Transparency</string>
+    <string name="status_bar_transparency">Status bar transparency</string>
+    <string name="status_bar_transparency_title">Status bar</string>
+    <string name="status_bar_lock_transparency_title">Status bar lockscreen</string>
+    <string name="nav_bar_transparency">Navigation bar transparency</string>
+    <string name="nav_bar_transparency_title">Navigation bar</string>
+    <string name="nav_bar_lock_transparency_title">Navigation bar lockscreen</string>
+    <string name="transparency_settings_reset">Reset</string>
+
 </resources>
