@@ -469,6 +469,7 @@
     <string name="clock_use_second_summary">시계에 초를 표시</string>
 
     <!-- Circle Battery Mod -->
+    <string name="status_bar_battery">배터리</string>
     <string name="circle_mod_cat">원 배터리 옵션</string>
     <string name="circle_battery_color">원 색상</string>
     <string name="circle_battery_text_color">백분율 색상</string>

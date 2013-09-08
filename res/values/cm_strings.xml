@@ -1024,6 +1024,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="clock_use_second_summary">Show second in clock</string>
 
     <!-- Circle Battery Mod -->
+    <string name="status_bar_battery">Battery</string>
     <string name="circle_mod_cat">Circle battery options</string>
     <string name="circle_battery_color">Circle color</string>
     <string name="circle_battery_text_color">Circle text color</string>
