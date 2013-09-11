@@ -90,39 +90,60 @@
 
         </PreferenceCategory>
 
+        <PreferenceCategory
+            android:key="listview_animation_title"
+            android:title="@string/listview_animation_title">
 
-     <PreferenceCategory
-        android:key="halo_options"
-        android:title="@string/halo_options_title">
+           <ListPreference
+               android:key="listview_animation"
+               android:dialogTitle="@string/listview_animation_title"
+               android:title="@string/listview_animation_title"
+               android:entries="@array/listview_animation_entries"
+               android:entryValues="@array/listview_animation_values"
+               android:defaultValue="3" />
 
-        <ListPreference
-            android:key="halo_state"
-            android:dialogTitle="@string/halo_state_title"
-            android:title="@string/halo_state_title"
-            android:summary="@string/halo_state_summary"
-            android:entries="@array/entries_halo_state"
-            android:entryValues="@array/values_halo_state" />
+           <ListPreference
+               android:key="listview_interpolator"
+               android:dialogTitle="@string/listview_interpolator_title"
+               android:title="@string/listview_interpolator_title"
+               android:entries="@array/listview_interpolator_entries"
+               android:entryValues="@array/listview_interpolator_values"
+               android:defaultValue="4" />
 
-        <CheckBoxPreference
-            android:key="halo_hide"
-            android:title="@string/halo_hide_title"
-            android:summary="@string/halo_hide_summary"
-            android:defaultValue="false" />
+        </PreferenceCategory>
 
-        <CheckBoxPreference
-            android:key="halo_reversed"
-            android:title="@string/halo_reversed_title"
-            android:summary="@string/halo_reversed_summary"
-            android:defaultValue="true" />
+        <PreferenceCategory
+            android:key="halo_options"
+            android:title="@string/halo_options_title">
 
-        <ListPreference
-            android:key="halo_size"
-            android:dialogTitle="@string/halo_size_title"
-            android:title="@string/halo_size_title"
-            android:summary="@string/halo_size_summary"
-            android:entries="@array/entries_halo_size"
-            android:entryValues="@array/values_halo_size" />
+            <ListPreference
+                android:key="halo_state"
+                android:dialogTitle="@string/halo_state_title"
+                android:title="@string/halo_state_title"
+                android:summary="@string/halo_state_summary"
+                android:entries="@array/entries_halo_state"
+                android:entryValues="@array/values_halo_state" />
 
-    </PreferenceCategory>
+            <CheckBoxPreference
+                android:key="halo_hide"
+                android:title="@string/halo_hide_title"
+                android:summary="@string/halo_hide_summary"
+                android:defaultValue="false" />
+
+            <CheckBoxPreference
+                android:key="halo_reversed"
+                android:title="@string/halo_reversed_title"
+                android:summary="@string/halo_reversed_summary"
+                android:defaultValue="true" />
+
+            <ListPreference
+                android:key="halo_size"
+                android:dialogTitle="@string/halo_size_title"
+                android:title="@string/halo_size_title"
+                android:summary="@string/halo_size_summary"
+                android:entries="@array/entries_halo_size"
+                android:entryValues="@array/values_halo_size" />
+
+       </PreferenceCategory>
 
 </PreferenceScreen>
