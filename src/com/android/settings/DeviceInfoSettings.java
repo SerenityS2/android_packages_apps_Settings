@@ -40,6 +40,9 @@ import java.util.regex.Pattern;
 public class DeviceInfoSettings extends SettingsPreferenceFragment {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
+    
+    private static final String FILENAME_PROC_VERSION = "/proc/version";
+    private static final String FILENAME_MSV = "/sys/board_properties/soc/msv";
 
     private static final String KEY_CONTAINER = "container";
     private static final String KEY_TEAM = "team";
@@ -208,20 +211,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 mDevHitToast = Toast.makeText(getActivity(), R.string.show_dev_already,
                         Toast.LENGTH_LONG);
                 mDevHitToast.show();
-            }
-        } else if (preference.getKey().equals(KEY_MOD_VERSION)) {
-            System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
-            mHits[mHits.length-1] = SystemClock.uptimeMillis();
-            if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.putExtra("is_cid", true);
-                intent.setClassName("android",
-                        com.android.internal.app.PlatLogoActivity.class.getName());
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    Log.e(LOG_TAG, "Unable to start activity " + intent.toString());
-                }
             }
         } else if (preference.getKey().equals(KEY_SELINUX_STATUS)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
