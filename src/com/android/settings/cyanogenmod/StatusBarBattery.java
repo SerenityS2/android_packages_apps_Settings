@@ -30,7 +30,6 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.cluster.customizer.utils.Utils;
 
 public class StatusBarBattery extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
