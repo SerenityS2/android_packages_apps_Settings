@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cyanogenmod.fragments;
+package com.android.settings.cyanogenmod;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
