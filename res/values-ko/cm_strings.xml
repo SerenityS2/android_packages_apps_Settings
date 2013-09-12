@@ -443,6 +443,7 @@
 
     <!-- HALO -->
     <string name="halo_options_title">HALO</string>
+    <string name="halo_behavior_title">HALO 행동</string>
     <string name="halo_hide_title">작동 후 HALO 숨기기</string>
     <string name="halo_hide_summary">작동한 후에 HALO를 자동으로 숨깁니다.</string>
     <string name="halo_reversed_title">HALO 제스쳐</string>
@@ -451,6 +452,13 @@
     <string name="halo_state_summary">HALO 정책을 설정합니다.</string>
     <string name="halo_state_black">블랙 리스트</string>
     <string name="halo_state_white">화이트 리스트</string>
+    <string name="halo_ninja_title">닌자 모드</string>
+    <string name="halo_ninja_summary">HALO가 알림이 없을 때 완전히 사라집니다.</string>
+    <string name="halo_notification_msgbox_title">메시지 창 사용</string>
+    <string name="halo_notification_msgbox_summary">메시지 창을 사용합니다.</string>
+    <string name="halo_unlock_ping_title">잠금 해제시 알림</string>
+    <string name="halo_unlock_ping_summary">새로운 알림이 수신 된 경우, 장치가 잠금이 해제 될 때 알림을 보여줍니다.</string>
+
     <!-- Label for are-notifications-enabled checkbox in app details [CHAR LIMIT=20] -->
     <string name="app_halo_label_black">HALO 블랙 리스트로 설정</string>
     <string name="app_halo_label_white">HALO 화이트 리스트로 설정</string>
@@ -463,6 +471,18 @@
     <string name="halo_size_large">약간 큼</string>
     <string name="halo_size_gigantic">큼</string>
     <string name="halo_size_monster">아주 큼</string>
+
+    <string name="halo_notification_count_title">알림 개수 표시</string>
+    <string name="halo_notification_count_summary">대기 중인 알림의 개수를 표시합니다.</string>
+    <string name="halo_notification_count_none">사용 안함</string>
+    <string name="halo_notification_count_total">모두</string>
+    <string name="halo_notification_count_individual">앱마다</string>
+    <string name="halo_notification_count_both">둘 다</string>
+
+    <string name="halo_msgbox_animation_title">메시지 창 애니메이션</string>
+    <string name="halo_msgbox_animation_summary">새로운 알림이 왔을 때 메시지 창의 애니메이션을 설정합니다.</string>
+    <string name="halo_msgbox_animation_none">사용 안함</string>
+    <string name="halo_msgbox_animation_flip">플립</string>
 
     <!-- Statusbar Second Clock -->
     <string name="clock_use_second">초 시계</string>
