@@ -442,18 +442,21 @@
     <string name="root_access_all">애플리케이션 및 ADB</string>
 
     <!-- HALO -->
+    <string name="halo_enabled_title">HALO 활성화</string>
+    <string name="halo_enabled_summaryOn">HALO 기능이 활성화되었습니다.</string>
+    <string name="halo_enabled_summaryOff">HALO 기능이 비활성화되었습니다.</string>
     <string name="halo_options_title">HALO</string>
     <string name="halo_behavior_title">HALO 행동</string>
     <string name="halo_hide_title">작동 후 HALO 숨기기</string>
     <string name="halo_hide_summary">작동한 후에 HALO를 자동으로 숨깁니다.</string>
-    <string name="halo_reversed_title">HALO 제스쳐</string>
-    <string name="halo_reversed_summary">제스쳐를 사용합니다.</string>
+    <string name="halo_reversed_title">HALO 제스쳐 반전</string>
+    <string name="halo_reversed_summary">제스쳐를 반전시킵니다.</string>
     <string name="halo_state_title">HALO 정책</string>
     <string name="halo_state_summary">HALO 정책을 설정합니다.</string>
     <string name="halo_state_black">블랙 리스트</string>
     <string name="halo_state_white">화이트 리스트</string>
     <string name="halo_ninja_title">닌자 모드</string>
-    <string name="halo_ninja_summary">HALO가 알림이 없을 때 완전히 사라집니다.</string>
+    <string name="halo_ninja_summary">HALO에 알림이 없을 경우 완전히 사라집니다.</string>
     <string name="halo_notification_msgbox_title">메시지 창 사용</string>
     <string name="halo_notification_msgbox_summary">메시지 창을 사용합니다.</string>
     <string name="halo_unlock_ping_title">잠금 해제시 알림</string>
