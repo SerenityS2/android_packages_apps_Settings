@@ -28,11 +28,19 @@
             android:title="@string/status_bar_show_clock_title"
             android:defaultValue="true" />
 
+<<<<<<< HEAD
         <CheckBoxPreference
             android:key="clock_use_second"
             android:title="@string/clock_use_second"
             android:summary="@string/clock_use_second_summary"
             android:defaultValue="false" />
+=======
+       <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
+            android:key="status_bar_center_clock"
+            android:title="@string/status_bar_center_clock_title"
+            android:defaultValue="false"
+            android:dependency="status_bar_clock" />
+>>>>>>> 69906e5... Add center clock (2/2)
 
         <ListPreference
             android:key="status_bar_am_pm"
